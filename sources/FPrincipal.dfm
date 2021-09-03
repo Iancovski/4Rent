@@ -15,14 +15,6 @@ inherited frmPrincipal: TfrmPrincipal
     ExplicitWidth = 734
     ExplicitHeight = 561
   end
-  object Edit1: TEdit [2]
-    Left = 344
-    Top = 288
-    Width = 121
-    Height = 23
-    TabOrder = 2
-    Text = 'Edit1'
-  end
   inherited ImageList: TImageList
     Left = 736
     Top = 16

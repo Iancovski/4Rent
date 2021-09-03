@@ -11,7 +11,6 @@ uses
 
 type
   TfrmPrincipal = class(TfrmRootPrincipal)
-    Edit1: TEdit;
   private
     { Private declarations }
   public
