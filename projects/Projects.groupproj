@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{8DBAFDEF-F705-4537-9DBC-5D1BFB137C1C}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Components.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ForRent.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Components">
+        <MSBuild Projects="Components.dproj"/>
+    </Target>
+    <Target Name="Components:Clean">
+        <MSBuild Projects="Components.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Components:Make">
+        <MSBuild Projects="Components.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ForRent">
+        <MSBuild Projects="ForRent.dproj"/>
+    </Target>
+    <Target Name="ForRent:Clean">
+        <MSBuild Projects="ForRent.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ForRent:Make">
+        <MSBuild Projects="ForRent.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Components;ForRent"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Components:Clean;ForRent:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Components:Make;ForRent:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

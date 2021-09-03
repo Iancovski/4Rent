@@ -1,0 +1,108 @@
+inherited frmRootCadastro: TfrmRootCadastro
+  Caption = 'frmRootCadastro'
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 15
+  inherited pnlTitulo: TPanel
+    Caption = 'Cadastro'
+  end
+  inherited pnlGeral: TPanel
+    inherited pnlOpcoes: TPanel
+      Font.Color = clWhite
+      ParentFont = False
+      object btnCancelar: TSpeedButton
+        Left = 100
+        Top = 0
+        Width = 100
+        Height = 50
+        Align = alLeft
+        Caption = '&Cancelar'
+        Flat = True
+        OnClick = btnCancelarClick
+        ExplicitLeft = 106
+      end
+      object btnSalvar: TSpeedButton
+        Left = 0
+        Top = 0
+        Width = 100
+        Height = 50
+        Align = alLeft
+        Caption = '&Salvar'
+        Flat = True
+        OnClick = btnSalvarClick
+        ExplicitLeft = 8
+      end
+    end
+    object pnlFields: TPanel
+      Left = 0
+      Top = 50
+      Width = 800
+      Height = 500
+      Align = alClient
+      BevelOuter = bvNone
+      TabOrder = 1
+      object lblID: TLabel
+        Left = 20
+        Top = 20
+        Width = 39
+        Height = 15
+        Caption = 'C'#243'digo'
+      end
+      object btnEditID: TSpeedButton
+        Left = 100
+        Top = 38
+        Width = 25
+        Height = 25
+        Flat = True
+        Glyph.Data = {
+          36030000424D3603000000000000360000002800000010000000100000000100
+          18000000000000030000C40E0000C40E00000000000000000000FF00FFFF00FF
+          FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FFFF00FF0000000000000000005D5E5CFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF000000
+          0000000000000000005D5E5CFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FFFF00FF0000000000000000000000000000005D5E5CFF
+          00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C
+          0000000000000000000000000000005D5E5CFF00FFFF00FFFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C00000000000000000000000000
+          00005D5E5CFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+          FF00FF5C5D5C0000000000000000000000000000005D5E5CFF00FFFF00FFFF00
+          FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C00000000000000
+          00000000000000005D5E5CFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF
+          FF00FFFF00FFFF00FF5C5D5C000000000000000000000000000000585958FF00
+          FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C00
+          00000000000000000000000000005C5D5CFF00FFFF00FFFF00FFFF00FFFF00FF
+          FF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C0000000000000000000000008183
+          80FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+          00FF5C5D5C000000000000818380FF00FF7B7C7A5D5E5CFF00FFFF00FFFF00FF
+          FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C818380FF00FF797A
+          78000000000000656665FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FF797A780000000000000000005E5F5DFF00FFFF00FF
+          FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FF5C5D5C0000
+          00000000535453FF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF00FFFF
+          00FFFF00FFFF00FFFF00FFFF00FF6566655E5F5DFF00FFFF00FF}
+        OnClick = btnEditIDClick
+      end
+      object edtID: TEdit
+        Left = 20
+        Top = 39
+        Width = 80
+        Height = 23
+        Enabled = False
+        MaxLength = 20
+        TabOrder = 0
+        OnExit = edtIDExit
+      end
+    end
+  end
+  inherited ImageList: TImageList
+    Left = 752
+    Top = 120
+  end
+  object dsQuery: TDataSource
+    Left = 752
+    Top = 176
+  end
+end
