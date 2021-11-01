@@ -44,7 +44,7 @@ var
   i: Integer;
 begin
   for i := 0 to ComponentCount - 1 do begin
-    if Components[i] is TFDQuery then
+    if (Components[i] is TFDQuery) and (Components[i] <> fdqPesq) then
       TFDQuery(Components[i]).CommitUpdates;
   end;
 end;

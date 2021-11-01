@@ -50,7 +50,7 @@ inherited frmRootConsulta: TfrmRootConsulta
         Width = 100
         Height = 50
         Align = alLeft
-        Caption = '&Consultar'
+        Caption = '&Visualizar'
         Flat = True
         ExplicitLeft = 220
         ExplicitTop = 6

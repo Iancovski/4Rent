@@ -132,6 +132,24 @@
             <FormType>dfm</FormType>
         </DCCReference>
         <DCCReference Include="..\sources\UUtils.pas"/>
+        <DCCReference Include="..\sources\DPrincipal.pas">
+            <Form>dmPrincipal</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\sources\DCidades.pas">
+            <Form>dmCidades</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\sources\FCadCidades.pas">
+            <Form>frmCadCidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\sources\FConsCidades.pas">
+            <Form>frmConsCidades</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

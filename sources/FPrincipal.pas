@@ -11,6 +11,11 @@ uses
 
 type
   TfrmPrincipal = class(TfrmRootPrincipal)
+    btnAlugueis: TToolButton;
+    btnImoveis: TToolButton;
+    btnTerceiros: TToolButton;
+    btnCidades: TToolButton;
+    procedure btnCidadesClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -23,5 +28,13 @@ var
 implementation
 
 {$R *.dfm}
+
+uses DCidades, FConsCidades, UUtils;
+
+procedure TfrmPrincipal.btnCidadesClick(Sender: TObject);
+begin
+  inherited;
+  NewForm(frmConsCidades, TfrmConsCidades, dmCidades, TdmCidades, Self, pnlPrincipal);
+end;
 
 end.
