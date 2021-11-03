@@ -4,13 +4,17 @@ inherited frmRootConsulta: TfrmRootConsulta
   TextHeight = 15
   inherited pnlTitulo: TPanel
     Caption = 'Meus '
+    ExplicitWidth = 800
   end
   inherited pnlGeral: TPanel
+    ExplicitWidth = 800
+    ExplicitHeight = 550
     inherited pnlOpcoes: TPanel
       Font.Color = clWhite
       ParentFont = False
+      ExplicitWidth = 800
       object btnExcluir: TSpeedButton
-        Left = 300
+        Left = 200
         Top = 0
         Width = 100
         Height = 50
@@ -18,7 +22,6 @@ inherited frmRootConsulta: TfrmRootConsulta
         Caption = 'E&xcluir'
         Flat = True
         OnClick = btnExcluirClick
-        ExplicitLeft = 200
       end
       object btnEditar: TSpeedButton
         Left = 100
@@ -43,17 +46,6 @@ inherited frmRootConsulta: TfrmRootConsulta
         OnClick = btnNovoClick
         ExplicitLeft = -6
         ExplicitTop = -6
-      end
-      object btnConsultar: TSpeedButton
-        Left = 200
-        Top = 0
-        Width = 100
-        Height = 50
-        Align = alLeft
-        Caption = '&Visualizar'
-        Flat = True
-        ExplicitLeft = 220
-        ExplicitTop = 6
       end
     end
     object dbgQuery: TDBGrid

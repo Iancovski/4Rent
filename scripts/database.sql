@@ -58,7 +58,7 @@ create table IMOVEL_DESPESA (
 create table ALUGUEL (
   ID serial not null,
   ID_IMOVEL integer not null,
-  ID_TERCEIRO integer not null,
+  ID_INQUILINO integer not null,
   DATA_ENTRADA date not null,
   TIPO_ALUGUEL char(1) not null,
   PERIODO integer not null,
@@ -68,7 +68,7 @@ create table ALUGUEL (
   constraint PK_ALUGUEL primary key (ID)
 );
 
-create table TERCEIRO (
+create table INQUILINO (
   ID serial not null,
   NOME varchar(100) not null,
   CPF varchar(20) not null,
@@ -76,16 +76,16 @@ create table TERCEIRO (
   RENDA double precision,
   ATIVO char(1),
 
-  constraint PK_TERCEIRO primary key (ID)
+  constraint PK_INQUILINO primary key (ID)
 );
 
-create table TERCEIRO_CONTATO (
+create table INQUILINO_CONTATO (
   ID serial not null,
-  ID_TERCEIRO integer not null,
+  ID_INQUILINO integer not null,
   DESCRICAO varchar(50) not null,
   CONTATO varchar(200) not null,
 
-  constraint PK_TERCEIRO_CONTATO primary key (ID)
+  constraint PK_INQUILINO_CONTATO primary key (ID)
 );
 
 create table ALUGUEL_RECEITA (
@@ -101,8 +101,8 @@ create table RECEITA_DESPESA (
   ID serial not null,
   DATA date not null,
   DATA_VENCIMENTO date not null,
-  ID_TERCEIRO integer not null,
-  DESCRIÇÃO varchar(500) not null,
+  ID_INQUILINO integer,
+  DESCRICAO varchar(500) not null,
   VALOR double precision not null,
   TIPO char(1) not null,
   ORIGEM char(1) not null,
@@ -141,12 +141,12 @@ constraint FK_ALUGUEL_IMOVEL
 foreign key (ID_IMOVEL) references IMOVEL (ID);
 
 alter table ALUGUEL add
-constraint FK_ALUGUEL_TERCEIRO
-foreign key (ID_TERCEIRO) references TERCEIRO (ID);
+constraint FK_ALUGUEL_INQUILINO
+foreign key (ID_INQUILINO) references INQUILINO (ID);
 
-alter table TERCEIRO_CONTATO add
-constraint FK_TERCEIRO_CONTATO_TERCEIRO
-foreign key (ID_TERCEIRO) references TERCEIRO (ID);
+alter table INQUILINO_CONTATO add
+constraint FK_INQUILINO_CONTATO_INQUILINO
+foreign key (ID_INQUILINO) references INQUILINO (ID);
 
 alter table ALUGUEL_RECEITA add
 constraint FK_ALUGUEL_RECEITA_ALUGUEL
@@ -157,5 +157,5 @@ constraint FK_ALUGUEL_RECEITA_RECEITA
 foreign key (ID_RECEITA) references RECEITA_DESPESA (ID);
 
 alter table RECEITA_DESPESA add
-constraint FK_RECEITA_DESPESA_TERCEIRO
-foreign key (ID_TERCEIRO) references TERCEIRO (ID);
+constraint FK_RECEITA_DESPESA_INQUILINO
+foreign key (ID_INQUILINO) references INQUILINO (ID);

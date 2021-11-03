@@ -17,7 +17,6 @@ type
     btnNovo: TSpeedButton;
     dsQuery: TDataSource;
     dbgQuery: TDBGrid;
-    btnConsultar: TSpeedButton;
     procedure btnNovoClick(Sender: TObject);
     procedure btnEditarClick(Sender: TObject);
     procedure btnExcluirClick(Sender: TObject);

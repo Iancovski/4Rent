@@ -13,9 +13,13 @@ type
   TfrmPrincipal = class(TfrmRootPrincipal)
     btnAlugueis: TToolButton;
     btnImoveis: TToolButton;
-    btnTerceiros: TToolButton;
+    btnInquilinos: TToolButton;
     btnCidades: TToolButton;
+    btnRelatorios: TToolButton;
     procedure btnCidadesClick(Sender: TObject);
+    procedure btnImoveisClick(Sender: TObject);
+    procedure btnInquilinosClick(Sender: TObject);
+    procedure btnAlugueisClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,12 +33,31 @@ implementation
 
 {$R *.dfm}
 
-uses DCidades, FConsCidades, UUtils;
+uses UUtils, DCidades, FConsCidades, DImoveis, FConsImoveis, DInquilinos, FConsInquilinos,
+  FConsAlugueis, DAlugueis;
+
+procedure TfrmPrincipal.btnAlugueisClick(Sender: TObject);
+begin
+  inherited;
+  NewForm(frmConsAlugueis, TfrmConsAlugueis, dmAlugueis, TdmAlugueis, Self, pnlPrincipal);
+end;
 
 procedure TfrmPrincipal.btnCidadesClick(Sender: TObject);
 begin
   inherited;
   NewForm(frmConsCidades, TfrmConsCidades, dmCidades, TdmCidades, Self, pnlPrincipal);
+end;
+
+procedure TfrmPrincipal.btnImoveisClick(Sender: TObject);
+begin
+  inherited;
+  NewForm(frmConsImoveis, TfrmConsImoveis, dmImoveis, TdmImoveis, Self, pnlPrincipal);
+end;
+
+procedure TfrmPrincipal.btnInquilinosClick(Sender: TObject);
+begin
+  inherited;
+  NewForm(frmConsInquilinos, TfrmConsInquilinos, dmInquilinos, TdmInquilinos, Self, pnlPrincipal);
 end;
 
 end.

@@ -28,7 +28,6 @@ object frmRootPrincipal: TfrmRootPrincipal
     ParentShowHint = False
     ShowHint = True
     TabOrder = 0
-    ExplicitHeight = 681
     object pnInicio: TPanel
       Left = 0
       Top = 0
@@ -70,7 +69,6 @@ object frmRootPrincipal: TfrmRootPrincipal
       Caption = 'tbrMenu'
       Images = ImageList
       TabOrder = 1
-      ExplicitHeight = 581
     end
     object pnConfiguracoes: TPanel
       Left = 0
@@ -80,7 +78,6 @@ object frmRootPrincipal: TfrmRootPrincipal
       Align = alBottom
       BevelOuter = bvNone
       TabOrder = 2
-      ExplicitTop = 631
       object tbrConfiguracoes: TToolBar
         Left = 0
         Top = 0
@@ -108,15 +105,13 @@ object frmRootPrincipal: TfrmRootPrincipal
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 1
-    ExplicitWidth = 1214
-    ExplicitHeight = 681
   end
   object ImageList: TImageList
     ColorDepth = cd32Bit
     Height = 32
     Width = 32
-    Left = 1208
-    Top = 24
+    Left = 736
+    Top = 16
     Bitmap = {
       494C010102000800040020002000FFFFFFFF2110FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000002000000001002000000000000040

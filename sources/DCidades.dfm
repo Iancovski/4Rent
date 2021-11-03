@@ -1,4 +1,5 @@
 inherited dmCidades: TdmCidades
+  OldCreateOrder = True
   object fdqCidades: TCFDQuery
     CachedUpdates = True
     Connection = dmPrincipal.FDConnection
@@ -8,10 +9,11 @@ inherited dmCidades: TdmCidades
       '       M.NOME,'
       '       M.UF'
       'from MUNICIPIO M')
-    Left = 48
+    Left = 40
     Top = 24
     object fdqCidadesid: TFDAutoIncField
       FieldName = 'id'
+      ReadOnly = True
     end
     object fdqCidadesnome: TWideStringField
       FieldName = 'nome'

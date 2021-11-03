@@ -24,6 +24,12 @@ inherited frmCadCidades: TfrmCadCidades
         EditLabel.Width = 34
         EditLabel.Height = 15
         EditLabel.Caption = 'Nome'
+        EditLabel.Font.Charset = ANSI_CHARSET
+        EditLabel.Font.Color = clWindowText
+        EditLabel.Font.Height = -13
+        EditLabel.Font.Name = 'Roboto'
+        EditLabel.Font.Style = []
+        EditLabel.ParentFont = False
       end
       object edtUF: TCDBEdit
         Left = 428

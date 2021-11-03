@@ -150,6 +150,45 @@
             <Form>frmConsCidades</Form>
             <FormType>dfm</FormType>
         </DCCReference>
+        <DCCReference Include="..\sources\DImoveis.pas">
+            <Form>dmImoveis</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\sources\FConsImoveis.pas">
+            <Form>frmConsImoveis</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\sources\FCadImoveis.pas">
+            <Form>frmCadImoveis</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\sources\DInquilinos.pas">
+            <Form>dmInquilinos</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\sources\FConsInquilinos.pas">
+            <Form>frmConsInquilinos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\sources\FCadInquilinos.pas">
+            <Form>frmCadInquilinos</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\sources\DAlugueis.pas">
+            <Form>dmAlugueis</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="..\sources\FCadAlugueis.pas">
+            <Form>frmCadAlugueis</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="..\sources\FConsAlugueis.pas">
+            <Form>frmConsAlugueis</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
